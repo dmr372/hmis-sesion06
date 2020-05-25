@@ -20,6 +20,7 @@ public class Alumno {
 	public ArrayList<Actividad> getActividadesAsignadas() {
 		return actividadesAsignadas;
 	}
+	
 
 	public void setActividadesAsignadas(ArrayList<Actividad> actividadesAsignadas) {
 		this.actividadesAsignadas = actividadesAsignadas;
