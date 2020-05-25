@@ -30,6 +30,7 @@ public class FerryTest {
 		f.embarcarVehiculo(v2);
 		
 		assertTrue(f.vacio()==false);
+		 
 		
 		
 		
