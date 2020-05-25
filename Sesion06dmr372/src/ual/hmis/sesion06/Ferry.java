@@ -37,7 +37,7 @@ public class Ferry {
 			return false;
 		}
 		
-		// verdadero si el n�mero total de los veh�culos supera el m�ximo
+		// verdadero si el número total de los vehículos supera el máximo
 		public boolean superadoMaximoVehiculos() {
 			if (numTotalVehiculos > numMaxVehiculos) return true;
 			return false;

@@ -11,9 +11,10 @@ import org.junit.jupiter.params.provider.CsvSource;
 public class FerryTest {
 
 	@ParameterizedTest
-	@CsvSource({"Actividad 2,5.5", 
-			 	"Actividad 24,0",})
-	void testFerry(Vehiculo input, Ferry expected) {
+	@CsvSource({"1200, 4, 4", 
+			 	"2000, 5, 4",})
+	void testFerry(int peso, int numRuedas, int numPasajeros) {
+		
 		Vehiculo v1 = new Vehiculo();
 		Vehiculo v2 = new Vehiculo();
 		Vehiculo v3 = new Vehiculo();
@@ -28,32 +29,18 @@ public class FerryTest {
 		
 		f.embarcarVehiculo(v1);
 		f.embarcarVehiculo(v2);
+		f.embarcarVehiculo(v1);
 		
 		assertTrue(f.vacio()==false);
 		 
-		
-		
-		
-		
-		
-		
-		
+		assertTrue(f.totalVehiculos()==2);
+		f.setNumMaxVehiculos(2);
 		f.embarcarVehiculo(v3);
+		assertTrue(f.superadoMaximoVehiculos());
+		f.setPesoMaxVehiculos(1400);
+		assertTrue(f.superadoMaximoPeso());
 		
-		a2.setEjercicios(new ArrayList<Ejercicio>());
-		a2.agregarEjercicioCalificado("e1", 2);
-		a2.agregarEjercicioCalificado("e2", 0.5);
-		a2.agregarEjercicioCalificado("e3", 3);
 		
-		ArrayList<Actividad> actividades = new ArrayList<Actividad>();
-		actividades.add(a1);
-		actividades.add(a2);
-		actividades.add(a3);
-		
-		Alumno alumno = new Alumno();
-		alumno.setActividadesAsignadas(actividades);
-		
-		assertEquals(expected, alumno.calcularNotaActividad(input));
 	}
 
 }
