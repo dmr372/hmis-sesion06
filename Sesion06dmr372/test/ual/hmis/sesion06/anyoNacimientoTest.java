@@ -14,5 +14,6 @@ import ejercicio5.Alumno;
 		Alumno al = new Alumno();
 		al.cursoSegunEdad(anyo);
 	}
+	
 
 }
