@@ -2,19 +2,16 @@ package ual.hmis.sesion06;
 
 public class Vehiculo {
 
-	private int numPasajeros;
-	private int numRuedas;
-	private int peso;
 	
-	public Vehiculo(int peso, int numPasajeros, int numRuedas) {
-		this.peso = 0;
-		this.numPasajeros = 5;
-		this.numRuedas = 4;
-	}
-
-	public void setPeso(int peso) {
+	int numPasajerosVehi;
+	int numRuedas;
+	int peso;
+	
+	public Vehiculo(int numPasajeros, int numRuedas, int peso) {
+		super();
+		this.numPasajerosVehi = numPasajeros;
+		this.numRuedas = numRuedas;
 		this.peso = peso;
 	}
-	
-	
+
 }
